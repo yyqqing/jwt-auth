@@ -224,7 +224,7 @@ public function handle($request, Closure $next, $guard = null)
 
 ## 版本说明
 
-- 1.0.6 (2017-02-20)
+- 1.1 (2017-02-20)
   - 重构代码，简化 lumen 集成过程，且更 lumen-style :)
 
 - 1.0.4 (2016-11-21)
