@@ -129,25 +129,6 @@ return [
 #### Laravel
 在config文件夹中找到auth.php
 
-#### Lumen
-将```auth.php```配置文件复制到config文件夹
-
-修改如下:
-```php
-<?php
-return [
-    'defaults' => [
-        'guard' => env('AUTH_GUARD', 'api'),
-    ],
-    'guards' => [
-        'api' => ['driver' => 'jwt'],//这里必须是jwt,由JWTGuard驱动
-    ],
-    'providers' => [
-        //
-    ],
-];
-```
-
 ### 开启认证
 修改 bootstrap/app.php，取消 auth middleware 及 AuthServiceProvider 的注释
 
@@ -155,7 +136,10 @@ return [
 ```php
 public function boot()
 {
+    // 加载 配置文件
     $this->app->configure('jwt');
+
+    // 第一个参数为 auth.php 中 guard 的 driver 名，
     $this->app['auth']->viaRequest('api', function ($request) {
         $token = \Lsxiao\JWT\Token::fromRequest($request);
 
