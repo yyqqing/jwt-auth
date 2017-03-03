@@ -1,4 +1,4 @@
-# jwt-auth [![PHP version](https://badge.fury.io/ph/lsxiao%2Fjwt-auth.svg)](https://badge.fury.io/ph/lsxiao%2Fjwt-auth)
+# jwt-auth
 Laravel/Lumen JSON Web Token 认证扩展包
 
 ## 待完成
@@ -9,7 +9,7 @@ Laravel/Lumen JSON Web Token 认证扩展包
 ## 引入jwt-auth到项目中
 
 ```bash
-composer require "lsxiao/jwt-auth"
+composer require "yyqqing/jwt-auth"
 ```
 
 
@@ -224,6 +224,9 @@ public function handle($request, Closure $next, $guard = null)
 
 ## 版本说明
 
+- 1.0.6 (2017-02-20)
+  - 重构代码，简化 lumen 集成过程，且更 lumen-style :)
+
 - 1.0.4 (2016-11-21)
   - 修复hasBlacklistGraceTimeOrNotInBlacklist函数的bug。
 
@@ -238,13 +241,6 @@ public function handle($request, Closure $next, $guard = null)
 
 - 1.0 (2016-9-29)
   - jwt基本功能提交
-
-
-
-## 维护人
-知乎 : [@面条](https://www.zhihu.com/people/lsxiao)
-
-Github : [@lsxiao](https://github.com/lsxiao)
 
 
 ## 开源许可
