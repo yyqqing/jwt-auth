@@ -124,11 +124,6 @@ return [
 
 ```
 
-### 配置auth
-
-#### Laravel
-在config文件夹中找到auth.php
-
 ### 开启认证
 修改 bootstrap/app.php，取消 auth middleware 及 AuthServiceProvider 的注释
 
